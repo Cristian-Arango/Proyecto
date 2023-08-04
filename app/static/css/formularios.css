@@ -1,0 +1,352 @@
+/* Estilos de form */
+html {
+height: 100%;
+}
+body {
+margin:0;
+padding:0;
+font-family: sans-serif;
+background: linear-gradient(#30142b, #a12727);
+}
+
+.login-box {
+position: absolute;
+top: 50%;
+left: 50%;
+width: 400px;
+padding: 40px;
+transform: translate(-50%, -50%);
+background: rgba(0,0,0,.5);
+box-sizing: border-box;
+box-shadow: 0 15px 25px rgba(0,0,0,.6);
+border-radius: 10px;
+}
+
+.login-box h2 {
+margin: 0 0 30px;
+padding: 0;
+color: #fff;
+text-align: center;
+}
+
+.login-box .user-box {
+position: relative;
+}
+
+.login-box .user-box input {
+width: 100%;
+padding: 10px 0;
+font-size: 16px;
+color: #fff;
+margin-bottom: 30px;
+border: none;
+border-bottom: 1px solid #fff;
+outline: none;
+background: transparent;
+}
+.login-box .user-box label {
+position: absolute;
+top:0;
+left: 0;
+padding: 10px 0;
+font-size: 16px;
+color: #fff;
+pointer-events: none;
+transition: .5s;
+}
+
+.login-box .user-box input:focus ~ label,
+.login-box .user-box input:valid ~ label {
+top: -20px;
+left: 0;
+color: #f68e44;
+font-size: 12px;
+}
+
+.login-box form a {
+position: relative;
+display: inline-block;
+padding: 10px 20px;
+color: #b79726;
+font-size: 16px;
+text-decoration: none;
+text-transform: uppercase;
+overflow: hidden;
+transition: .5s;
+margin-top: 40px;
+letter-spacing: 4px
+}
+
+/* ESTILOS BOTON */
+button {
+  --glow-color: rgb(0, 0, 0);
+  --glow-spread-color: rgba(54, 44, 44, 0.781);
+  --enhanced-glow-color: rgb(231, 206, 255);
+  --btn-color: rgb(148, 36, 36);
+  border: .25em solid var(--glow-color);
+  padding: 1em 3em;
+  color: var(--glow-color);
+  font-size: 15px;
+  font-weight: bold;
+  background-color: var(--btn-color);
+  border-radius: 1em;
+  outline: none;
+
+  position: relative;
+  transition: all 0.3s;
+ }
+ 
+ button::after {
+  pointer-events: none;
+  content: "";
+  position: absolute;
+  top: 120%;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  background-color: var(--glow-spread-color);
+  filter: blur(2em);
+  opacity: .7;
+  transform: perspective(1.5em) rotateX(35deg) scale(1, .6);
+ }
+ 
+ button:hover {
+  color: var(--btn-color);
+  background-color: var(--glow-color);
+  box-shadow: 0 0 1em .2em var(--glow-color),
+         0 0 4em 2em var(--glow-spread-color),
+         inset 0 0 .7em .2em var(--glow-color);
+ }
+ 
+ button:active {
+  box-shadow: 0 0 0.6em .2em var(--glow-color),
+         0 0 2.5em 2em var(--glow-spread-color),
+         inset 0 0 .5em .2em var(--glow-color);
+ }
+
+
+
+
+
+
+
+
+
+
+
+/* ESTILOS PARA MENSAJE CON JS */
+
+.msg{
+    text-align: center;
+    font-size: 3rem;
+    line-height: 1em;
+    font-weight: 800;
+    background: linear-gradient(#a12727,#30142b );
+    display: flex;
+    justify-content: center;
+    margin: 0 auto;
+}
+
+
+/* Spotify music card made by: csozi | Website: www.csozi.hu*/
+
+.card {
+  position: relative;
+  width: 250px;
+  height: 120px;
+  background: #191414;
+  border-radius: 10px;
+  padding: 10px;
+  margin: 25px;
+  
+}
+
+.top {
+  position: relative;
+  width: 100%;
+  display: flex;
+  gap: 10px;
+}
+
+.pfp {
+  position: relative;
+  top: 5px;
+  left: 5px;
+  height: 40px;
+  width: 40px;
+  background-color: #d2d2d2;
+  border-radius: 5px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.title-1 {
+  color: white;
+  font-size: 25px;
+  font-weight: bolder;
+}
+
+.title-2 {
+  color: white;
+  font-size: 12px;
+  font-weight: bold;
+}
+
+.time {
+  width: 90%;
+  background-color: #5e5e5e;
+  height: 6px;
+  border-radius: 3px;
+  position: absolute;
+  left: 5%;
+  bottom: 22px;
+}
+
+.elapsed {
+  width: 42%;
+  background-color: #830808;
+  height: 100%;
+  border-radius: 3px;
+}
+
+.controls {
+  color: white;
+  display: flex;
+  position: absolute;
+  bottom: 30px;
+  left: 0;
+  width: 100%;
+  justify-content: center;
+}
+
+.volume {
+  height: 100%;
+  width: 48px;
+}
+
+.air {
+  height: 100%;
+  width: 48px;
+}
+
+.controls svg {
+  cursor: pointer;
+  transition: 0.1s;
+}
+
+.controls svg:hover {
+  color: #fa0000;
+}
+
+.volume {
+  opacity: 0;
+  position: relative;
+  transition: 0.2s;
+}
+
+.volume .slider {
+  height: 4px;
+  background-color: #5e5e5e;
+  width: 80%;
+  border-radius: 2px;
+  margin-top: 8px;
+  margin-left: 10%;
+}
+
+.volume .slider .green {
+  background-color: #ff0000;
+  height: 100%;
+  width: 80%;
+  border-radius: 3px;
+}
+
+.volume .circle {
+  background-color: white;
+  height: 6px;
+  width: 6px;
+  border-radius: 3px;
+  position: absolute;
+  right: 20%;
+  top: 60%;
+}
+
+.volume_button:hover ~ .volume {
+  opacity: 1;
+}
+
+.timetext {
+  color: white;
+  font-size: 8px;
+  position: absolute;
+}
+
+.time_now {
+  bottom: 11px;
+  left: 10px;
+}
+
+.time_full {
+  bottom: 11px;
+  right: 10px;
+}
+
+.playing {
+  display: flex;
+  position: relative;
+  justify-content: center;
+  gap: 1px;
+  width: 30px;
+  height: 20px;
+}
+
+.greenline {
+  background-color: #ff0000;
+  height: 20px;
+  width: 2px;
+  position: relative;
+  transform-origin: bottom;
+}
+
+.line-1 {
+  animation: infinite playing 1s ease-in-out;
+  animation-delay: 0.2s;
+}
+
+.line-2 {
+  animation: infinite playing 1s ease-in-out;
+  animation-delay: 0.5s;
+}
+
+.line-3 {
+  animation: infinite playing 1s ease-in-out;
+  animation-delay: 0.6s;
+}
+
+.line-4 {
+  animation: infinite playing 1s ease-in-out;
+  animation-delay: 0s;
+}
+
+.line-5 {
+  animation: infinite playing 1s ease-in-out;
+  animation-delay: 0.4s;
+}
+
+@keyframes playing {
+  0% {
+    transform: scaleY(0.1);
+  }
+
+  33% {
+    transform: scaleY(0.6);
+  }
+
+  66% {
+    transform: scaleY(0.9);
+  }
+
+  100% {
+    transform: scaleY(0.1);
+  }
+}
