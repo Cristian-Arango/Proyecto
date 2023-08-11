@@ -161,6 +161,29 @@ button {
   
 }
 
+.feedback{
+  /* ancgo */
+  max-width: 100%;
+  width: 98%;
+  /* color del div */
+  background-color: rgb(255, 0, 0);
+  /* espacio */
+  padding: 5px;
+  /* color de la letra */
+  color: black;
+  /* tamaño de fuente */
+  font-size: 10px;
+  /* visibilidad oculta */
+      visibility: hidden;
+      opacity: 0;
+}
+
+.success{
+  border: 2px solid lime;
+}
+.error{
+  border: 2px solid red;
+}
 .top {
   position: relative;
   width: 100%;

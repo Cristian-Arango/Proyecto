@@ -1,0 +1,69 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <title>Registro Ref</title>
+  <!-- Required meta tags -->
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <link rel="stylesheet" href="{{ url_for('static', filename='css/formularios.css') }}">
+</head> 
+<body>
+
+{% if msg %}
+<p class="msg">{{ msg }}</p>
+{% endif %}
+
+<div class="login-box">
+  <h2>FORM THE REFERENCES</h2>
+  <form action="{{ url_for('registrar_ref') }}" method="POST" autocomplete="off">
+    <div class="user-box">
+      <label for="idCate">Seleccione la Categoría:</label>
+      <br><br>
+      <select id="idCate" name="idCate">
+        {% for categoria in categorias %}
+          <option value="{{ categoria.idCate }}">{{ categoria.nomCate }}</option>
+        {% endfor %}
+      </select>
+    </div>
+
+    <br>
+    <div class="user-box">
+      <input type="text" name="nomRef" required="">
+      <label>Nombre</label>
+    </div>
+    <div class="user-box">
+      <input type="text" name="precioRef" required="">
+      <label>Precio</label>
+    </div>
+    <div class="user-box">
+      <input type="text" name="descripcionRef" required="">
+      <label>Descripcion</label>
+    </div>
+
+    <div class="user-box">
+      <label for="idTela">Seleccione la tela:</label>
+      <br><br>
+      <select id="idTela" name="idTela">
+        {% for tela in telas %}
+          <option value="{{ tela.idTela }}">{{ tela.nomTela }}</option>
+        {% endfor %}
+      </select>
+    </div>
+
+    <br><br>
+
+    <div class="user-box">
+      <label for="foto">Seleccione una foto:</label>
+      <br>
+      <input type="file" id="img" name="img">
+    </div>
+
+    <br><br>
+
+    <button type="submit">Send</button>
+  </form>
+</div>
+
+<script type="text/javascript" src="{{ url_for('static', filename='js/1.js') }}"></script>
+</body>
+</html>
