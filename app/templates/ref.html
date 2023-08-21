@@ -32,7 +32,7 @@
       <label>Nombre</label>
     </div>
     <div class="user-box">
-      <input type="text" name="precioRef" required="">
+      <input type="number" name="precioRef" required="">
       <label>Precio</label>
     </div>
     <div class="user-box">
@@ -58,9 +58,9 @@
       <input type="file" id="img" name="img">
     </div>
 
-    <br><br>
+    <br><br>  
 
-    <button type="submit">Send</button>
+    <button type="submit" ><a href="{{ url_for('testCata') }}"></a>Send</button>
   </form>
 </div>
 

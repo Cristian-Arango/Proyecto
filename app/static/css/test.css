@@ -1,0 +1,13 @@
+.card-container{
+	width: 70%;
+	margin: 105px 0;
+	display: grid;
+	grid-template-columns: 32% 32% 32% 32%;
+	grid-template-rows: 30% 30% 30%;
+	min-height: 80vh;
+	gap: 62px 1.857%;
+}
+
+.card:hover{
+    background: lightcoral;
+}
